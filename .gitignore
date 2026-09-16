@@ -1,0 +1,37 @@
+# Shortcuts
+*.lnk
+
+# Canvas files
+*.canvas
+
+# Python environment/cache
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Editor/tooling folders
+.vscode/
+.idea/
+
+# Claude Code local overrides (not shared)
+.claude/settings.local.json
+
+# Dependencies
+node_modules/
+
+# Secrets
+.env
+.env.local
+
+# Logs
+*.log
+
+# OS junk
+.DS_Store
+Thumbs.db
+
+# Notes not meant for version control
+temp.md
+Fabric.md
+DP700todo.md
