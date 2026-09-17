@@ -14,6 +14,10 @@ Instead of re-explaining the same context every time (to another person or to an
 Three of the reference files (`exam-domains.md`, `topic-by-product-area.md`, `known-gotchas.md`) carry `markmap:` YAML front matter.
 That's optional — the files read fine as plain markdown — but if you open them with a markmap-capable viewer (e.g. the [Markmap VS Code extension](https://marketplace.visualstudio.com/items?itemName=gera2ld.markmap-vscode)), the same heading/bullet outline also renders as a mind map.
 
+For example, here's `references/topic-by-product-area.md` rendered as a mind map by that extension:
+
+![topic-by-product-area.md rendered as a mind map in the Markmap VS Code extension](Markmap_example.png)
+
 ## What's in this folder
 
 ```
@@ -23,6 +27,7 @@ DP700_Assistant/
 ├── CLAUDE.md                      ← one-line pointer to AGENTS.md
 ├── .mcp.json                      ← Microsoft Learn MCP connection
 ├── .gitignore                     ← excludes local/non-shared files (see below)
+├── Markmap_example.png            ← screenshot: a reference file rendered as a mind map (see below)
 ├── .claude/
 │   └── settings.json               ← shared Claude Code settings (settings.local.json is not shared)
 └── references/
