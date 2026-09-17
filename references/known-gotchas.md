@@ -71,6 +71,17 @@ A collection of choice-between-two-similar-features situations that DP-700 is li
 - vs. row/column/object-level security in T-SQL
 - vs. dynamic data masking (shows a masked value, doesn't block access to the row).
 
+## **Domain assignment does NOT affect access**
+- Assigning a workspace to a domain is purely an organizational/governance concept (data mesh grouping, filtering in the OneLake catalog, delegated tenant settings).
+- It has **no effect** on who can see or access the workspace/items — that's still governed entirely by workspace roles and item-level permissions.
+- All tenant users can see all domain *names*, even ones they have no role in.
+
+## **Starter pool vs. custom pool (Spark & Apache Airflow jobs)**
+- Same pattern shows up twice: Spark environment pools and Apache Airflow job pools.
+- **Starter pool** = default, starts instantly, fixed size, auto-shuts-down after inactivity (~20 min for Airflow) → good for dev/light use.
+- **Custom pool** = admin-defined size/autoscale/extra nodes, always-on until manually paused → good for production workloads.
+- If a question emphasizes "instant start" or "shuts down when idle" → starter pool; "production," "always-on," "needs specific sizing/autoscale" → custom pool.
+
 ## **"Higher/lower granularity" means the OPPOSITE of what most people would assume, in Microsoft's usage**
 - Microsoft consistently uses (confirmed in both the Fabric Warehouse dimensional-modeling documentation and the Power BI aggregation documentation — two separate teams/sources): **"higher granularity" = COARSER, a more aggregated level** (e.g. quarter, fewer rows) — not more fine-grained.
 - "Lower granularity" = **more fine-grained**, closer to the atomic/transaction level (e.g. day or individual row).
