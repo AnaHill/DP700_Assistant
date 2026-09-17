@@ -41,6 +41,14 @@ DP700_Assistant/
 
 The listing above only covers files added to version control (`git ls-files`). Personal/work-in-progress notes (e.g. `temp.md`) and typical junk (`__pycache__/`, `.venv/`, `node_modules/`, `.env*`, etc.) are excluded via `.gitignore`.
 
+`references/study-progress.md` is a special case: it's tracked so the repo has a placeholder/template for anyone, but day-to-day progress ticks are personal and typically shouldn't be pushed. To stop Git from tracking your local edits to it (without untracking or ignoring the file itself), run:
+
+```
+git update-index --skip-worktree references/study-progress.md
+```
+
+Reverse with `git update-index --no-skip-worktree references/study-progress.md` if you do want to push an update.
+
 ## Sources
 Some useful links for AI Assistant
   - "*My AI Setup for Microsoft Fabric: Never Explain Yourself Twice*" [(video)](https://www.youtube.com/watch?v=5-sXBbBJbAk)
